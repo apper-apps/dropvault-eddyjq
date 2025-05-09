@@ -103,8 +103,8 @@ const ContactUs = () => {
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-1">Name</label>
-            <div className="relative">
-              <span className="absolute left-3 top-3 text-surface-400"><UserIcon size={18} /></span>
+            <div className="relative flex items-center">
+              <span className="absolute left-3 text-surface-400"><UserIcon size={18} /></span>
               <input type="text" id="name" name="name" value={formData.name} onChange={handleChange} className="input pl-10" placeholder="Your name" />
             </div>
             {errors.name && <p className="mt-1 text-sm text-accent">{errors.name}</p>}
@@ -112,8 +112,8 @@ const ContactUs = () => {
           
           <div>
             <label htmlFor="email" className="block text-sm font-medium mb-1">Email</label>
-            <div className="relative">
-              <span className="absolute left-3 top-3 text-surface-400"><MailIcon size={18} /></span>
+            <div className="relative flex items-center">
+              <span className="absolute left-3 text-surface-400"><MailIcon size={18} /></span>
               <input type="email" id="email" name="email" value={formData.email} onChange={handleChange} className="input pl-10" placeholder="your.email@example.com" />
             </div>
             {errors.email && <p className="mt-1 text-sm text-accent">{errors.email}</p>}
@@ -121,8 +121,8 @@ const ContactUs = () => {
           
           <div>
             <label htmlFor="subject" className="block text-sm font-medium mb-1">Subject</label>
-            <div className="relative">
-              <span className="absolute left-3 top-3 text-surface-400"><MessageSquareIcon size={18} /></span>
+            <div className="relative flex items-center">
+              <span className="absolute left-3 text-surface-400"><MessageSquareIcon size={18} /></span>
               <input type="text" id="subject" name="subject" value={formData.subject} onChange={handleChange} className="input pl-10" placeholder="Subject of your message" />
             </div>
             {errors.subject && <p className="mt-1 text-sm text-accent">{errors.subject}</p>}
