@@ -6,6 +6,7 @@ import { motion } from 'framer-motion';
 import getIcon from './utils/iconUtils';
 import Home from './pages/Home';
 import NotFound from './pages/NotFound';
+import ContactUs from './pages/ContactUs';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -58,12 +59,20 @@ function App() {
       <main className="container mx-auto px-4 py-6 md:px-6 lg:px-8">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/contact" element={<ContactUs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
 
       <footer className="mt-auto py-6 px-6 bg-white dark:bg-surface-800 border-t border-surface-200 dark:border-surface-700">
-        <div className="container mx-auto text-sm text-center text-surface-500 dark:text-surface-400">
+        <div className="container mx-auto flex flex-col items-center">
+          <div className="mb-3">
+            <nav className="flex justify-center space-x-6 text-sm font-medium">
+              <a href="/" className="text-surface-600 dark:text-surface-400 hover:text-primary dark:hover:text-primary-light">Home</a>
+              <a href="/contact" className="text-surface-600 dark:text-surface-400 hover:text-primary dark:hover:text-primary-light">Contact Us</a>
+            </nav>
+          </div>
+          <div className="text-sm text-center text-surface-500 dark:text-surface-400">
           &copy; {new Date().getFullYear()} DropVault. All rights reserved.
         </div>
       </footer>
