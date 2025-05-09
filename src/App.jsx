@@ -74,6 +74,7 @@ function App() {
           </div>
           <div className="text-sm text-center text-surface-500 dark:text-surface-400">
           &copy; {new Date().getFullYear()} DropVault. All rights reserved.
+          </div>
         </div>
       </footer>
 
